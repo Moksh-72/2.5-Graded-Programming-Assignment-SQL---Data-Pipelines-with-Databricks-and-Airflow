@@ -81,6 +81,8 @@ SELECT
     d.budget - COALESCE(SUM(e.salary), 0) AS budget_remaining
 FROM departments AS d
 LEFT JOIN employees AS e
+
+    --By Moksh Kulshrestha
     ON d.name = e.department
 GROUP BY
     d.name,
